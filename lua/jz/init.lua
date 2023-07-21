@@ -176,7 +176,6 @@ require('lazy').setup({
     "akinsho/toggleterm.nvim",
     cmd = { "ToggleTerm", "TermExec" },
     opts = {
-      size = 10,
       on_create = function()
         vim.opt.foldcolumn = "0"
         vim.opt.signcolumn = "no"
@@ -185,6 +184,7 @@ require('lazy').setup({
       shading_factor = 2,
       direction = "float",
       float_opts = {
+        size = 10,
         border = "curved",
         highlights = { border = "Normal", background = "Normal" },
       },
@@ -211,7 +211,7 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '┊',
+      char = '|',
       show_trailing_blankline_indent = false,
     },
   },
@@ -299,6 +299,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+
+-- Set tabstop to 4.
+vim.opt_global.tabstop = 4
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience

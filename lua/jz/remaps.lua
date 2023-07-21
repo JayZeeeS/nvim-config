@@ -1,5 +1,5 @@
 -- Remap for Toggleterm
-vim.keymap.set('n', '<F12>', "<cmd>ToggleTerm<CR>")
+vim.keymap.set({ 'n', 't' }, '<F12>', "<cmd>ToggleTerm<CR>")
 
 -- Leader Key remap
 vim.g.mapleader = ' '
@@ -9,8 +9,8 @@ vim.g.maplocalleader = ' '
 
 
 -- Remap for Neotree
-vim.keymap.set('n', '<leader>tt', '<cmd>Neotree toggle reveal<CR>', { desc = '[t] Toggle filetree' })
-vim.keymap.set('n', '<leader>tf', function()
+vim.keymap.set('n', '<leader>ff', '<cmd>Neotree toggle reveal<CR>', { desc = '[t] Toggle filetree' })
+vim.keymap.set('n', '<leader>ft', function()
     if vim.bo.filetype == "neo-tree" then
       vim.cmd.wincmd "p"
     else
